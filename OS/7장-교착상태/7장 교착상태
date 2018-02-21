@@ -55,7 +55,7 @@
 
 그런데 다음 그림을 보자.
 
-![교착 상태 아닌 그래프](images/ResourceAllocationGraphWithOutDeadlock.png)
+![교착 상태 아닌 그래프](images/ResourceAllocationGraphWithoutDeadlock.png)
 
 다음 그림에서도 사이클을 발견할 수 있다.
 - *P<sub>1</sub>* -> *R<sub>1</sub>* -> *P<sub>3</sub>* -> *R<sub>2</sub>* -> *P<sub>1</sub>*
