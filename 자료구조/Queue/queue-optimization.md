@@ -71,3 +71,7 @@ public struct Queue<T> {
 `dequeue()` 메서드 내부의 그 다음 코드는 앞쪽에 비어있는 자리를 주기적으로 trim해주기 위한 코드이다. 이 예시 코드에서는 두 가지 조건을 두었는데, 하나는 비어있는 길이가 전체 길이의 25% 이상이어야 한다는 것이고, 다른 하나는 전체 길이가 적어도 50은 되어야 한다는 것이다. 이것은 임의의 숫자로 필요에 따라 적절히 조정할 수 있다.
 
 이렇게 `dequeue()` 메서드를 최적화함으로써 빈 공간를 차지하고 있던 `nil`을 제거해 낭비되는 공간을 줄이는 효과를 얻을 수 있다. 그리고 `dequeue()` 메서드는 O(1)의 시간 복잡도를 달성하게 되었다.
+
+## References
+
+- [Queue - Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/blob/master/Queue/README.markdown)
