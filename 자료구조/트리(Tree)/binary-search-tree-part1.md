@@ -22,15 +22,6 @@
 
 ### 노드 탐색
 
-To find a value in the tree, we perform the same steps as with insertion:
-
-If the value is less than the current node, then take the left branch.
-If the value is greater than the current node, take the right branch.
-If the value is equal to the current node, we've found it!
-Like most tree operations, this is performed recursively until either we find what we are looking for or run out of nodes to look at.
-
-Here is an example for searching the value 5:
-
 트리 안에 특정 값이 있는지 확인하는 방법은 삽입의 방식과 유사하다. 찾는 값이 현재 노드의 값보다 작으면 왼쪽 가지를 탄다. 더 크다면 오른쪽 가지를 탄다. 동일하다면 탐색을 성공한 것이다. 리프 노드에 닿았지만 찾지 못하였다면 트리 안에 찾는 값이 없는 것이다. 다음은 5를 찾는 과정을 그림으로 표현한 것이다.
 
 ![](images/Searching.png)
@@ -38,8 +29,6 @@ Here is an example for searching the value 5:
 트리를 이용한 탐색은 빠르다. O(h) 시간이 소요된다. 100만 개의 노드로 구성된 트리가 균형이 잘 잡혀 있다고 한다면, 20번의 이동 안에 어떤 값이든 찾을 수 있다.
 
 ### 노드 삭제
-
-Removing nodes is easy. After removing a node, we replace the node with either its biggest child on the left or its smallest child on the right. That way the tree is still sorted after the removal. In the following example, 10 is removed and replaced with either 9 (Figure 2) or 11 (Figure 3).
 
 노드를 제거하는 것은 쉽다. 노드를 제거하고 나서 왼쪽 서브 트리를 구성하는 노드들 중 값이 가장 큰 노드를 그 자리로 이동시키거나, 또는 오른쪽 서브 트리의 노드들 중 가장 작은 노드를 이동시키면 된다. 아래 그림에서 Figure 2는 전자, Figure 3는 후자에 해당한다.
 
@@ -184,14 +173,6 @@ public func search(value: T) -> BinarySearchTree? {
   }
 }
 ```
-
-I hope the logic is clear: this starts at the current node (usually the root) and compares the values. If the search value is less than the node's value, we continue searching in the left branch; if the search value is greater, we dive into the right branch.
-
-If there are no more nodes to look at -- when left or right is nil -- then we return nil to indicate the search value is not in the tree.
-
-Note: In Swift, that is conveniently done with optional chaining; when you write left?.search(value) it automatically returns nil if left is nil. There is no need to explicitly check for this with an if statement.
-
-Searching is a recursive process, but you can also implement it with a simple loop instead:
 
 탐색은 현재 노드(주로 루트 노드)에서 시작하여 값을 비교하는 과정이다. 찾는 값이 현재 노드의 값보다 작으면 왼쪽 가지를, 크면 오른쪽 가지를 탄다. 왼쪽이나 오른쪽에 더 이상 비교할 노드가 남아있지 않다면 `nil`을 반환하여 값이 없다는 결과를 준다. Swift의 옵셔널 체이닝을 통해 if 문 없이 간편하게 `nil`을 반환할 수 있다.
 
