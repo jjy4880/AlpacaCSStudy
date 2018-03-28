@@ -213,3 +213,7 @@ RB-DELETE-FIXUP(T, x) {
 ```
 
 교정 연산을 제외했을 때 `O(log n)`의 시간이 걸리고, `RB-DELETE-FIXUP` 실행 시 경우 2에서만 `O(log n)`이 소요되어 총 수행시간은 `O(log n)`이 걸린다.
+
+## Reference
+
+- Introduction to Algorithms, 3rd edition, Thomas H. Cormen, 한빛 아케데미

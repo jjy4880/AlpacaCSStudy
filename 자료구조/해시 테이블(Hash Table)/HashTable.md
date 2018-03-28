@@ -99,3 +99,8 @@ HASH-SERACH(T, k) {
 - 선형 조사: 순차적으로 탐색.
 - 2차원 조사: 2차 함수를 통해 탐색.
 - 중복 해싱: 해시 함수를 추가적으로 적용.
+
+## Reference
+
+- Introduction to Algorithms, 3rd edition, Thomas H. Cormen, 한빛 아케데미
+- Cracking the Coding Interview, Gayle Laakmann McDowell, 인사이트
