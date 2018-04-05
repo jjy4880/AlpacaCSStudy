@@ -192,6 +192,7 @@ public static boolean hasCycleByDFS(ArrayList<ArrayList<Vertex>> graph, Vertex s
 `Union-Find` 자료구조의 구현은 주로 `트리(Tree)`를 사용하며 `배열(Array)`은 `Find` 연산의 O(1)이라는 빠른 속도에도 불구하고 보다 많이 수행되는 `Union` 연산이 O(n) 시간이 걸려 사용하지 않는다.
 
 **트리에서는 각 집합이 각 트리의 루트 노드로 표현된다.**
+
 ![](images/union-find.png)
 
 `트리(Tree)`를 사용하면 연산은 다음과 같다.
