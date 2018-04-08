@@ -1,20 +1,28 @@
 # 그래프 (Graph)
 
-> [이곳](https://www.raywenderlich.com/152046/swift-algorithm-club-graphs-adjacency-list)에서 이 주제에 대한 튜토리얼을 볼 수 있다.
+**들어가기에 앞서**
+
+- 이 글은 *Donald Pinckney* 와 *Matthijs Hollemans* 가 최초 작성하였고, [*Kangsoo Lee*](https://github.com/oaksong)가 한국어로 번역하였습니다.
+- 소스 코드와 예제 프로젝트는 Swift Algorithm Club의 [원 글 저장소](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Graph)에서 확인할 수 있습니다.
+- Swift Algorithm Club의 [한국어 번역판 저장소](https://github.com/oaksong/swift-algorithm-club-ko)에서 더 많은 번역글을 만나보세요.
+
+---
+
+> 이 주제에 대한 튜토리얼은 [이곳](https://www.raywenderlich.com/152046/swift-algorithm-club-graphs-adjacency-list)에서 볼 수 있다.
 
 그래프는 다음과 같은 모습을 하고 있다.
 
 ![](images/Graph.png)
 
-컴퓨터 과학에서 그래프는 *정점(vertex)*들과 *간선(edge)*들의 집합으로 정의된다. 정점들은 원으로, 간선들은 정점들 사이의 선으로 표현한다. 간선들은 하나의 정점과 다른 정점들을 연결한다.
+컴퓨터 과학에서 그래프는 *정점(vertex)* 들과 *간선(edge)* 들의 집합으로 정의된다. 정점들은 원으로, 간선들은 정점들 사이의 선으로 표현한다. 간선들은 하나의 정점과 다른 정점들을 연결한다.
 
-> 노트: 정점은 "노드(node)"로, 간선은 "링크(link)"로 표현되기도 한다.
+> **노트:** 정점은 "노드(node)"로, 간선은 "링크(link)"로 표현되기도 한다.
 
 그래프로 사회 연결망을 표현할 수 있다. 사람 한 명을 하나의 정점으로 표현하고, 서로 아는 사람들끼리 간선으로 연결한다. 예를 들면 다음과 같다.
 
 ![](images/SocialNetwork.png)
 
-그래프는 다양한 형태와 크기로 표현될 수 있다. 그리고 간선은 양수 또는 음수의 *가중치(weight)*를 가질 수 있다. 비행기 항공편을 나타내는 그래프를 예로 들어보자. 도시들은 정점으로 항공편들은 간선으로 표현할 수 있다. 그리고 간선의 가중치로서 항공편의 소요 시간이나 티켓 가격 정보를 표현할 수 있다.
+그래프는 다양한 형태와 크기로 표현될 수 있다. 그리고 간선은 양수 또는 음수의 *가중치(weight)* 를 가질 수 있다. 비행기 항공편을 나타내는 그래프를 예로 들어보자. 도시들은 정점으로 항공편들은 간선으로 표현할 수 있다. 그리고 간선의 가중치로서 항공편의 소요 시간이나 티켓 가격 정보를 표현할 수 있다.
 
 ![](images/Flights.png)
 
@@ -55,7 +63,6 @@ San Francisco에서 Moscow로 가려면 New York을 거치는 것이 가장 저�
 그래프로 표현된 이 문제를 가지고 이제, 깊이 우선 탐색을 사용하여 위상 정렬(topological sort)을 수행할 수 있다. 최소한의 시간으로 모든 작업들이 완료되도록 작업들은 가장 바람직한 순서로 정렬될 것이다. (가능한 한 가지 순서는 A, B, D, E, C, F, G, H, I, J, K이다.)
 
 잘 풀리지 않는 프로그래밍 문제를 만날 때에는 "이 문제를 그래프를 사용하여 표현할 수 있을까?"라고 스스로에게 질문을 던져보자. 그래프는 데이터 사이의 관계 표현에 대한 것이다. 이것은 "관계"를 어떻게 정의하느냐에 달려 있다.
-
 
 당신이 만약 음악가라면 이 그래프를 이해할 것이다:
 
@@ -138,9 +145,7 @@ public struct Vertex<T>: Equatable where T: Equatable, T: Hashable {
 
 ## 코드: 그래프
 
-Note: There are many ways to implement graphs. The code given here is just one possible implementation. You probably want to tailor the graph code to each individual problem you are trying to solve. For instance, your edges may not need a `weight` property, or you may not have the need to distinguish between directed and undirected edges.
-
-> 노트: 그래프를 구현하는 방법에는 여러 가지가 있다. 여기서 제시하는 코드는 그 중 하나이다. 문제 상황에 맞추어 필요에 따라 그래프를 구현하는 코드를 수정할 수도 있다. 예를 들어 간선의 `weight` 프로퍼티가 필요하지 않거나, 간선의 방향이 있든 없든 상관 없을 수 있다.
+> **노트:** 그래프를 구현하는 방법에는 여러 가지가 있다. 여기서 제시하는 코드는 그 중 하나이다. 문제 상황에 맞추어 필요에 따라 그래프를 구현하는 코드를 수정할 수도 있다. 예를 들어 간선의 `weight` 프로퍼티가 필요하지 않거나, 간선의 방향이 있든 없든 상관 없을 수 있다.
 
 다음은 간단한 그래프의 예시이다.
 
@@ -236,7 +241,7 @@ v4 -> [(v1: 2.8)]
 
 인접 행렬은 이차원 배열 `[[Double?]]`로 구현할 수 있다. `nil`을 입력하면 간선이 없음을 뜻하는 것이고, 값을 주어 가중치를 표현할 수도 있다. `adjacencyMatrix[i][j]`의 값이 `nil`이 아니라면 `i`로부터 `j`로 이어지는 간선이 있다는 뜻이다.
 
-정점들이 생성할 때 부여한 `Vertex`의 `index` 프로퍼티를 사용하여 행렬의 내부를 구성한다. 새로운 정점을 생성할 때 행렬은 반드시 크기를 재조정해야 한다.
+정점들을 생성할 때 부여한 `Vertex`의 `index` 프로퍼티를 사용하여 행렬의 내부를 구성한다. 새로운 정점을 생성할 때 행렬은 반드시 크기를 재조정해야 한다.
 
 ```swift
 open override func createVertex(_ data: T) -> Vertex<T> {
@@ -282,8 +287,6 @@ open override func createVertex(_ data: T) -> Vertex<T> {
 ## 더 참고하면 좋은 것들
 
 이 글을 통해 그래프가 무엇이고, 그래프의 기본적인 구현은 어떻게 할 수 있는지 알아보았다. 이외에도 그래프를 실전적으로 사용하는 방법에 대한 글들도 마련되어 있으니 확인해보라.
-
-*Donald Pinckney*와 *Matthijs Hollemans*에 의하여 작성됨.
 
 ## References
 
