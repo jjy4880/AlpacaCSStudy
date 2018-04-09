@@ -133,7 +133,7 @@ array[parent(i)] >= array[i]
 
 트리의 *높이(height)* 는 루트 노드로에서부터 최하단 리프 노드까지 도달하는 데까지 걸리는 이동 횟수(step)으로 정의된다. 또는 정식적인 표현으로는 두 노드 사이의 간선의 수를 말한다. 높이 *h*의 힙은 *h + 1*개의 층위를 가진다.
 
-This heap has height 3, so it has 4 levels:
+이 힙의 높이는 3이므로 4개의 층위를 가진다.
 
 ![Large heap](images/LargeHeap.png)
 
@@ -148,8 +148,6 @@ This heap has height 3, so it has 4 levels:
 리프 노드들의 배열 인덱스는 항상 *floor(n/2)* 에서 *n-1* 사이에 있다. 이 사실을 활용하여 배열을 힙으로 빠르게 구성할 수 있다.
 
 ## 힙으로 무엇을 할 수 있을까?
-
-There are two primitive operations necessary to make sure the heap is a valid max-heap or min-heap after you insert or remove an element:
 
 힙에 원소를 삽입하거나 제거하고 나면 힙을 유효한 상태로 바로잡기 위해 추가적인 연산이 필요하다. 이 연산에는 두 가지가 있다.
 
@@ -203,7 +201,6 @@ There are two primitive operations necessary to make sure the heap is a valid ma
 
 안타깝게도 이렇게 되면 이 힙은 더 이상 힙 프로퍼티를 따르지 않는다. 왜냐하면 `(2)`가 `(16)` 위에 있는데 최대 힙에서는 큰 수가 작은 수보다 높은 곳에 위치해야 하기 때문이다.
 
-To restore the heap property, we swap `(16)` and `(2)`.
 힙 프로퍼티를 다시 따르기 위해 `(16)`과 ``(2)`를 스왑해보자.
 
 ![The heap before insertion](images/Insert2.png)
