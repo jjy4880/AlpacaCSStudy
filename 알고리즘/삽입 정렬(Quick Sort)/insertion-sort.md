@@ -219,7 +219,7 @@ func insertionSort<T>(_ array: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
 안쪽 루프의 코드를 살짝 수정한다.
 
 ```swift
-      while y > 0 && isOrderedBefore(temp, a[y - 1]) {
+while y > 0 && isOrderedBefore(temp, a[y - 1]) {
 ```
 
 `temp < a[y - 1]` 대신 `isOrderedBefore()`를 호출하여 숫자 이외에 데이터도 비교 가능하도록 한다.
