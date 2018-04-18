@@ -138,3 +138,4 @@ public struct MinimumCoinChange {
 - [그리디 알고리즘과 다이나믹 프로그래밍 비교](http://philoz.me/2017/07/12/%EA%B7%B8%EB%A6%AC%EB%94%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EA%B3%BC-%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EB%B9%84%EA%B5%90/)
 - [[알고리즘] Greedy Algorithm(욕심쟁이 알고리즘)](http://ujink.tistory.com/10)
 - [Greedy](http://www.incodom.kr/Greedy)
+- [Minimum Coin Change - Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/blob/master/MinimumCoinChange/Sources/MinimumCoinChange.swift)
