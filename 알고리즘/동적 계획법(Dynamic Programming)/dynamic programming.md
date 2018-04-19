@@ -79,6 +79,8 @@ static int bottomUpFib(int n) {
 4. 계산된 정보들로부터 최적해를 구성한다.
 나온 결과값을 받으면 된다.
 
-### 예제: [최장 공통 부분 시퀀스 문제](https://github.com/wnstkdyu/CSStudy/blob/master/CodingTest/%EC%9E%90%EC%A3%BC%20%EB%82%98%EC%98%A4%EB%8A%94%20%EC%A3%BC%EC%A0%9C/%EC%B5%9C%EC%9E%A5%20%EA%B3%B5%ED%86%B5%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4(LCS).md)
+### 예제 1: [최장 공통 부분 시퀀스 문제](https://github.com/wnstkdyu/CSStudy/blob/master/CodingTest/%EC%9E%90%EC%A3%BC%20%EB%82%98%EC%98%A4%EB%8A%94%20%EC%A3%BC%EC%A0%9C/%EC%B5%9C%EC%9E%A5%20%EA%B3%B5%ED%86%B5%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4(LCS).md)
+
+### 예제 2: [2 X n 타일링](https://www.acmicpc.net/problem/11726)
 
 
